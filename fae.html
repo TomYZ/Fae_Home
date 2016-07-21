@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>fae</title>
+     <meta charset="utf-8">
+
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- bootstrap library -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- toggle -->
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+</head>
+<style type="text/css">
+html{
+    overflow: hidden;
+}
+    body{
+        margin: 0px;
+        padding: 0;
+
+        font-family: "Avenir Next";
+        
+    }
+    .div_background{
+        background: url("background.png");
+        background-repeat: no-repeat;
+        background-size: 100% 700px;
+        height: 100%;
+        margin:0px;
+        width: 100%;
+    }
+    .div_menu{
+        padding-top: 2.1%;
+        text-align: center;
+    }
+    .table_menu{
+        margin-left: 34.74684%;
+        
+        text-align: center;
+    }
+    .td_menu{
+        align-self: center;
+        width: 87px;
+        color: white;
+        font-size: 10pt;
+        text-align: center;
+        font-weight: 500;
+    }
+    .div_icon{
+        width: 100%;
+        text-align: center;
+        margin-top: 61px;
+        margin-bottom: 17px;
+    }
+    .img_icon{
+        height: 57px;
+    }
+    .img_logoleft{
+        float: left;
+        width: 25px;
+        margin-top:-10px;
+        margin-left: 20px;
+    }
+    .div_fae{
+        width: 100%;
+        text-align: center;
+    }
+    .img_fae{
+        margin-left: 55px;
+        height: 25px;
+    }
+    .img_beta{
+        height: 9px;
+        margin-left: 3px;
+    }
+    .div_ad{
+        margin-top: 11px;
+        font-weight: bold;
+        text-align: center;
+        color: #6B6969;
+        font-size: 20px;
+    }
+    .div_ad_small{
+        margin-top: 15px;
+        font-weight: bold;
+        text-align: center;
+        color: #6B6969;
+    }
+    .input_email:focus {
+     color: #F95A5A;
+
+ }
+    .input_email{
+        
+        padding: 0px;
+        border-radius: 5px;
+        border: 0px;
+        
+        height: 35px;
+        margin: 0px;
+        margin-top: 25px;
+        color: #6B6969;
+        font-weight: 500;
+        padding-left: 13px;
+        font-size: 16px;
+    }
+    .div_inputemail{
+        text-align: center;
+    }
+    ::-moz-placeholder{ /* Firefox 19+ */ 
+     font-family: "Avenir Next";
+     color: #8A8A8A;
+     font-weight: 600;
+     padding-left: 10%;
+     font-size: 16px;
+     vertical-align: middle;
+    } 
+    .btn_email{
+        margin-left: 12px;
+        border-radius: 5px;
+        border:0px;
+        background-color: #F95A5A;
+        color: white;
+        height: 35px;
+        width: 153.5px;
+        padding: 0px;
+        margin-top: 24px;
+        font-family: "Avenir Next";
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .btn_email:hover{
+        background-color: #FCB033;
+    }
+    .btn_email_small{
+        margin-top: 30px;
+        
+        border-radius: 5px;
+        border:0px;
+        background-color: #F95A5A;
+        color: white;
+        height: 35px;
+        width: 153.5px;
+        padding: 0px;
+        font-family: "Avenir Next";
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    .div_bg2{
+        width: 100%;
+        margin-top: 66px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        min-width: 500px;
+    }
+    .bg_2{
+        margin:0px;
+        width: 92%;
+    }
+    .bg_2_small{
+        width: 185%;
+        margin-left: -53%;
+    }
+    .menu_small{
+        float: right;
+        vertical-align: middle;
+        text-align: right;
+        height: 50px;
+        padding-right: 20px;
+    }
+    .img_menu{
+        margin-top: 6.8%;
+    }
+    .hidden_menu{
+        position: absolute;
+        border-color: #595959;
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin-top: -8.68333px;
+        background-color: #595959;
+        opacity: 0.95;
+    }
+    .hidden_menu_table{
+        margin-top: 20%;
+        width: 100%;
+        height: 66%;
+        font-size: 22px;
+        font-weight: 500;
+        color: white;
+        font-family: "Avenir Next";
+    }
+    .close_menu{
+        float: right;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    
+
+    @media screen and (max-width:1450px)
+ {
+
+ .div_ad_small{
+ font-size:17px;
+ }
+.input_email{
+ width: 338px;
+ }
+
+ }
+ @media screen and (max-width:750px){
+    .btn_email_small{
+        margin-left: 12px;
+    }
+ }
+@media screen and (max-width:450px)
+ {
+
+ .div_ad_small{
+ font-size:17px;
+ }
+.input_email{
+ width: 350px;
+ }
+ .bg_2_small{
+    width: 174%;
+    margin-left: -47.9%;
+    overflow: hidden;
+ }
+.btn_email_small{
+        margin-left: 0px;
+    }
+.div_icon{
+    margin-top: 85px;
+}
+ .img_logoleft{
+    margin-top: 10px;
+}
+
+ }
+
+ @media screen and (max-width:380px)
+ {
+
+ .div_ad_small{
+ font-size:15px;
+ }
+.input_email{
+ width: 300px;
+ }
+ .bg_2_small{
+    width: 175%;
+ }
+.btn_email_small{
+        margin-left: 0px;
+    }
+    .img_logoleft{
+    margin-top: 10px;
+}
+
+ }
+ @media screen and (max-width:325px)
+ {
+
+ .div_ad_small{
+ font-size:12.5px;
+ }
+ .input_email{
+ width: 250px;
+ }
+.btn_email_small{
+        margin-left: 0px;
+    }
+ .bg_2_small{
+    width: 167%;
+    margin-left: -51%;
+ }
+ .img_logoleft{
+    margin-top: 10px;
+}
+
+ }
+
+</style>
+<body scroll="no" style="overflow:hidden">
+<div class="div_background">
+    
+    
+    <div class="div_menu">
+        <div>
+            <img src="logo_topleft.png" class="img_logoleft">
+        </div>
+        <div  class="hidden_menu">
+            <img src="close_menu.png" class="close_menu" onclick="close_menu()">
+            <table class="hidden_menu_table">
+                <tbody>
+                    <tr>
+                        <td>Features</td>
+                    </tr>
+                    <tr>
+                        <td>Business</td>
+                    </tr>
+                    <tr>
+                        <td>Careers</td>
+                    </tr>
+                    <tr>
+                        <td>FAQ</td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table class="table_menu hidden-xs ">
+            <tbody>
+                <tr>
+                    <td class="td_menu">Features</td>
+                    <td class="td_menu">Business</td>
+                    <td class="td_menu">Careers</td>
+                    <td class="td_menu">FAQ</td>
+                    <td class="td_menu">Contact</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="menu_small hidden-lg hidden-md hidden-sm col-xs-4">
+            <img src="menu.png" class="img_menu" onclick="open_menu();">
+        </div>
+    </div>
+    <div class="div_icon">
+        <img src="icon.png" class="img_icon">
+        
+    </div>
+    <div class="div_fae">
+        <img src="title.png" class="img_fae">
+        <img src="beta.png" class="img_beta">
+    </div>
+    <div class="div_ad hidden-xs ">
+        World’s Most Versatile Real-Time Social Map
+    </div>
+    <div class="div_ad_small hidden-lg hidden-md hidden-sm ">
+        World’s Most Versatile Real-Time Social Map
+    </div>
+    <div class="div_inputemail">
+        <input type="text" name="email" class="input_email" placeholder="Your Email...">
+        <button type="submit" name="email" class="btn_email hidden-xs">Early Bird Access</button>
+        <button type="submit" name="email" class="btn_email_small hidden-lg hidden-md hidden-sm ">Early Bird Access</button>
+    </div>
+    <div class="div_bg2">
+        <img src="background_2.png" class="bg_2 hidden-xs">
+        <img src="background_2.png" class="bg_2_small hidden-lg hidden-md hidden-sm ">
+    </div>
+    
+</div>
+</body>
+<script type="text/javascript">
+    function open_menu() {
+        
+        
+        $(".menu_small").attr('hidden',true);
+        $(".hidden_menu").fadeIn("normal");
+    }
+    function close_menu(){
+        $(".hidden_menu").fadeOut("normal");
+        $(".menu_small").attr('hidden',false);
+    }
+</script>
+</html>
